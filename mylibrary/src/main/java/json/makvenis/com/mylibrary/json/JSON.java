@@ -51,8 +51,6 @@ public class JSON {
 
         return new ArrayList<>();
     }
-
-
     /**
      * {@linkplain=Android} 适应与当只有一层Object的时候
      * 使用此方法
@@ -84,4 +82,6 @@ public class JSON {
         }
         return new HashMap<>();
     }
+
+    
 }
