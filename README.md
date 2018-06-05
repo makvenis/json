@@ -1,6 +1,10 @@
-# json
-使用方法
-        #<json.makvenis.com.mylibrary.json.view.SimpleRadioButton<br /><br />
+# json<br />
+JSON(string,string[])<br />
+
+#RadioButton<br />
+使用方法<br />
+        #<br />
+        <json.makvenis.com.mylibrary.json.view.SimpleRadioButton<br /><br />
             android:layout_marginTop="10dp"<br />
             android:textColor="@color/radiobutton_select_color"<br />
             android:id="@+id/Main_button_c"<br />
