@@ -1,4 +1,4 @@
-# json
+# html
 使用方法
         <json.makvenis.com.mylibrary.json.view.SimpleRadioButton
             android:layout_marginTop="10dp"
@@ -17,3 +17,4 @@
             android:text="个人中心"
             android:textSize="13sp"
             />
+            
