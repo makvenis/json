@@ -1,12 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:myradio="http://schemas.android.com/apk/res-auto"
+    xmlns:ver="http://schemas.android.com/apk/res-auto"
     tools:context="json.makvenis.com.json.MainActivity"
     android:weightSum="1">
 
+    <json.makvenis.com.mylibrary.json.view.SimpleInputCode
+        android:digits="1234567890."
+        android:id="@+id/verificationCodeInput"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        ver:box="4"
+        ver:box_bg_normal="@drawable/verification_edit_bg_normal"
+        ver:box_bg_focus="@drawable/verification_edit_bg_focus"
+        ver:child_h_padding="5dp"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="16dp">
+
+    </json.makvenis.com.mylibrary.json.view.SimpleInputCode>
+
+
+<!--
     <json.makvenis.com.mylibrary.json.view.SimpleRadioButton
         android:id="@+id/tab_b"
         android:layout_width="0dp"
@@ -23,5 +40,6 @@
         android:gravity="center"
         android:text="分类"
         android:textSize="13sp" />
+-->
 
 </LinearLayout>
