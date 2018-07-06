@@ -2,9 +2,9 @@ package json.makvenis.com.json;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.widget.Toast;
+import android.view.View;
 
-import json.makvenis.com.mylibrary.json.view.SimpleInputCode;
+import json.makvenis.com.mylibrary.json.view.SimpleDialogView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -15,15 +15,18 @@ public class MainActivity extends AppCompatActivity {
 
         //JSON.GetJson()
 
-        final SimpleInputCode inputCode = (SimpleInputCode) findViewById(R.id.verificationCodeInput);
-        inputCode.setOnCompleteListener(new SimpleInputCode.OnClinkOverListener() {
-            @Override
-            public void onComplete(String content) {
-                Toast.makeText(MainActivity.this,"输入完毕",Toast.LENGTH_SHORT).show();
 
+    }
 
+    public void showToast(View view) {
 
-            }
-        });
+        /*SimpleToast toast = SimpleToast.makeText(this, "我的toast信息", Toast.LENGTH_LONG);
+        toast.setGravity(Gravity.CENTER,0,50);
+        toast.show();*/
+
+        SimpleDialogView dialog=new SimpleDialogView(this,"玩命加载中...");
+        dialog.show();
+        dialog.close();
+
     }
 }

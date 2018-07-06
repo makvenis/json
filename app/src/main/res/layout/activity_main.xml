@@ -8,7 +8,7 @@
     tools:context="json.makvenis.com.json.MainActivity"
     android:weightSum="1">
 
-    <json.makvenis.com.mylibrary.json.view.SimpleInputCode
+<!--    <json.makvenis.com.mylibrary.json.view.SimpleInputCode
         android:digits="1234567890."
         android:id="@+id/verificationCodeInput"
         android:layout_width="match_parent"
@@ -21,6 +21,7 @@
         android:layout_marginBottom="16dp">
 
     </json.makvenis.com.mylibrary.json.view.SimpleInputCode>
+-->
 
 
 <!--
@@ -41,5 +42,12 @@
         android:text="分类"
         android:textSize="13sp" />
 -->
+
+    <!-- Toast自定义 -->
+    <Button
+        android:onClick="showToast"
+        android:text="显示Tast"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
 </LinearLayout>
