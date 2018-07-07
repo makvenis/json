@@ -10,4 +10,21 @@
         <item name="android:windowContentOverlay">@null</item>
 
     </style>
+
+    <!-- 用户界面样式 -->
+    <style name="UserButtonStyle">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:background">@drawable/background_round_tm</item>
+    </style>
+
+    <!-- Popwindows动画 -->
+    <style name="Popupwindow">
+        <item name="android:windowEnterAnimation">@anim/window_out</item>
+        <item name="android:windowExitAnimation">@anim/window_back</item>
+    </style>
+
 </resources>
