@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:scaleType="fitXY"
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/icon_test" />
+
+
+    <LinearLayout
+        android:id="@+id/mll"
+        android:orientation="horizontal"
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#474747">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/mLike"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="50dp"
+                android:src="@drawable/icon_like_01_120" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:text="1238"
+                android:textColor="#FFFFFF"
+                android:id="@+id/textView"
+                android:layout_alignBaseline="@+id/textView2"
+                android:layout_alignBottom="@+id/textView2"
+                android:layout_toEndOf="@+id/mLike"
+                android:layout_marginStart="10dp" />
+
+
+            <TextView
+                android:id="@+id/mTextTitle"
+                android:maxEms="8"
+                android:textColor="#FFFFFF"
+                android:text="我是标题我是标题"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/textView"
+                android:layout_alignBottom="@+id/textView"
+                android:layout_centerHorizontal="true" />
+
+
+            <ImageView
+                android:id="@+id/mOk"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/icon_ok_01_120"
+                android:layout_alignTop="@+id/mLike"
+                android:layout_toStartOf="@+id/textView2"
+                android:layout_marginEnd="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:text="1.2万"
+                android:textColor="#FFFFFF"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="50dp"
+                android:id="@+id/textView2" />
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</FrameLayout>

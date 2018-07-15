@@ -57,4 +57,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
+    <json.makvenis.com.mylibrary.json.view.SimpleViewPage
+        android:id="@+id/mSimpleViewPage"
+        android:layout_width="match_parent"
+        android:layout_height="500dp">
+
+    </json.makvenis.com.mylibrary.json.view.SimpleViewPage>
+
 </LinearLayout>
