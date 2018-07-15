@@ -18,7 +18,7 @@
         android:orientation="horizontal"
         android:layout_gravity="bottom"
         android:layout_width="match_parent"
-        android:layout_height="45dp"
+        android:layout_height="40dp"
         android:background="#474747">
 
         <RelativeLayout
@@ -29,10 +29,10 @@
                 android:id="@+id/mLike"
                 android:layout_width="28dp"
                 android:layout_height="28dp"
-                android:layout_alignParentStart="true"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/icon_like_01_120"
                 android:layout_centerVertical="true"
-                android:layout_marginStart="50dp"
-                android:src="@drawable/icon_like_01_120" />
+                android:layout_alignParentStart="true" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -49,9 +49,9 @@
 
             <TextView
                 android:id="@+id/mTextTitle"
-                android:maxEms="8"
+                android:maxEms="5"
                 android:textColor="#FFFFFF"
-                android:text="我是标题我是标题"
+                android:text="我是标题我"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignBaseline="@+id/textView"
@@ -65,8 +65,7 @@
                 android:layout_height="30dp"
                 android:src="@drawable/icon_ok_01_120"
                 android:layout_alignTop="@+id/mLike"
-                android:layout_toStartOf="@+id/textView2"
-                android:layout_marginEnd="10dp" />
+                android:layout_toStartOf="@+id/textView2" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -74,10 +73,10 @@
                 android:inputType="text"
                 android:text="1.2万"
                 android:textColor="#FFFFFF"
+                android:layout_marginEnd="10dp"
+                android:id="@+id/textView2"
                 android:layout_centerVertical="true"
-                android:layout_alignParentEnd="true"
-                android:layout_marginEnd="50dp"
-                android:id="@+id/textView2" />
+                android:layout_alignParentEnd="true" />
 
 
         </RelativeLayout>
