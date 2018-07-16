@@ -3,21 +3,11 @@ package json.makvenis.com.json;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
-import android.widget.Toast;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-import json.makvenis.com.mylibrary.json.view.SimpleToast;
-import json.makvenis.com.mylibrary.json.view.SimpleViewPage;
-import json.makvenis.com.mylibrary.json.view.SimpleViewPageLikeAdapter;
 
 public class MainActivity extends AppCompatActivity {
-    private SimpleViewPage mSimpleViewPage;
+    //private SimpleViewPage mSimpleViewPage;
 
     public final Context mContext = MainActivity.this;
 
@@ -28,11 +18,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+
+
         //mText = ((TextView) findViewById(R.id.mText));
 
         //JSON.GetJson()
 
-        mSimpleViewPage = ((SimpleViewPage) findViewById(R.id.mSimpleViewPage));
+        //mSimpleViewPage = ((SimpleViewPage) findViewById(R.id.mSimpleViewPage));
 
         /*String extra = getIntent().getStringExtra("data");
         mText.setText(extra);
@@ -46,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }*/
 
-        List<Map<String,String>> maps=new ArrayList<>();
+        /*List<Map<String,String>> maps=new ArrayList<>();
         for (int i = 0; i < 6; i++) {
             Map<String,String> map=new HashMap<>();
             if(i % 2 == 0){
@@ -82,7 +75,12 @@ public class MainActivity extends AppCompatActivity {
             public void showCollection(String mNum, int position, Map<String, String> map) {
                 SimpleToast.makeText(mContext,"点赞成功", Toast.LENGTH_SHORT).show();
             }
-        });
+        });*/
+
+
+
+
+
     }
 
     public void showToast(View view) {

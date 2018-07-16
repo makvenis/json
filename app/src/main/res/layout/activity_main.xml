@@ -5,9 +5,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:ver="http://schemas.android.com/apk/res-auto"
     tools:context="json.makvenis.com.json.MainActivity"
     android:weightSum="1">
+
+    <json.makvenis.com.mylibrary.json.view.SimpleDelPlusView
+        android:id="@+id/mAdd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </json.makvenis.com.mylibrary.json.view.SimpleDelPlusView>
 
 <!--    <json.makvenis.com.mylibrary.json.view.SimpleInputCode
         android:digits="1234567890."
@@ -45,7 +51,7 @@
 -->
 
     <!-- Toast自定义 -->
-    <Button
+    <!--<Button
         android:onClick="showToast"
         android:text="显示Tast"
         android:layout_width="match_parent"
@@ -62,6 +68,9 @@
         android:layout_width="match_parent"
         android:layout_height="500dp">
 
-    </json.makvenis.com.mylibrary.json.view.SimpleViewPage>
+    </json.makvenis.com.mylibrary.json.view.SimpleViewPage>-->
+
+
+
 
 </LinearLayout>
