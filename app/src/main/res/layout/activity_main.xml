@@ -9,8 +9,8 @@
     android:weightSum="1">
 
     <json.makvenis.com.mylibrary.json.view.SimpleDelPlusView
-        android:id="@+id/mAdd"
-        android:layout_width="match_parent"
+        android:id="@+id/mTest"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
     </json.makvenis.com.mylibrary.json.view.SimpleDelPlusView>

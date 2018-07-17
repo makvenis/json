@@ -1,9 +1,14 @@
 package json.makvenis.com.json;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Toast;
+
+import json.makvenis.com.mylibrary.json.view.SimpleDelPlusView;
+import json.makvenis.com.mylibrary.json.view.SimpleToast;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -18,7 +23,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+        SimpleDelPlusView view = (SimpleDelPlusView) findViewById(R.id.mTest);
+        view.setTextColor(Color.BLACK);
+        view.onClinkCheckNumber(new SimpleDelPlusView.setOnClinkCheckNumber() {
+            @Override
+            public void showNowNumbler(int num) {
+                SimpleToast.makeText(mContext,num+"", Toast.LENGTH_SHORT).show();
+            }
+        });
 
 
         //mText = ((TextView) findViewById(R.id.mText));

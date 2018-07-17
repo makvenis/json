@@ -1,6 +1,7 @@
 package json.makvenis.com.mylibrary.json.view;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.util.Log;
@@ -15,6 +16,15 @@ import json.makvenis.com.mylibrary.R;
 
 public class SimpleDelPlusView extends LinearLayout {
     public static final String TAG="SimpleDelPlusView";
+    public int textColor = Color.parseColor("#caa11d");
+
+    public int getTextColor() {
+        return textColor;
+    }
+
+    public void setTextColor(int textColor) {
+        this.textColor = textColor;
+    }
 
     public SimpleDelPlusView(Context context) {
         super(context);
@@ -26,17 +36,18 @@ public class SimpleDelPlusView extends LinearLayout {
         getLayout(context);
     }
 
-    public SimpleDelPlusView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
-        super(context, attrs, defStyleAttr);
-        getLayout(context);
-    }
-
 
     public void getLayout(Context mContext){
-        View view = LayoutInflater.from(mContext).inflate(R.layout.layout_del_plus, null);
+        LayoutInflater inflater=(LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        View view = inflater.inflate(R.layout.layout_del_plus, this);
+        //View view = LayoutInflater.from(mContext).inflate(R.layout.layout_del_plus, null);
         ImageView mDel = (ImageView) view.findViewById(R.id.mDel);
         ImageView mAdd = (ImageView) view.findViewById(R.id.mAdd);
         final TextView mNum = (TextView) view.findViewById(R.id.mTextNum);
+
+        /* 设置文本颜色 */
+        mNum.setTextColor(getTextColor());
+
 
         /* 获取或者设置默认的mNum */
         mNum.setText("0");
