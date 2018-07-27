@@ -18,7 +18,7 @@
         android:orientation="horizontal"
         android:layout_gravity="bottom"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="30dp"
         android:background="#474747">
 
         <RelativeLayout
@@ -49,6 +49,7 @@
 
             <TextView
                 android:id="@+id/mTextTitle"
+                android:maxLines="1"
                 android:maxEms="5"
                 android:textColor="#FFFFFF"
                 android:text="我是标题我"
