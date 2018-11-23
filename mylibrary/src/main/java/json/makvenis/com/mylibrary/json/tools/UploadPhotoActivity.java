@@ -192,8 +192,10 @@ public class UploadPhotoActivity extends AppCompatActivity {
         mFileName = intent.getStringExtra("filename");
     }
 
-        /* PopWindows 的操作等（开始） */
 
+
+
+    /* PopWindows 的操作等（开始） */
     /**
      * @ 解释直接调用 bottomwindow(view)方法
      * @ 解释 详细的不揍操作在方法setButtonListeners()里面
