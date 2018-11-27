@@ -225,12 +225,6 @@ public class SimpleImageBanner extends ViewGroup {
         }
     }
 
-    /* 拦截事件 */
-    @Override
-    public boolean onInterceptTouchEvent(MotionEvent ev) {
-        return true;
-    }
-
     /* 拦截处理方法 */
     @Override
     public boolean onTouchEvent(MotionEvent event) {
