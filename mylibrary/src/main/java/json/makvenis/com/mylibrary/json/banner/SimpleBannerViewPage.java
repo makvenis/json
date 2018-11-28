@@ -148,9 +148,20 @@ public class SimpleBannerViewPage extends ViewPager{
     /* 消除Handler得内存溢出 */
     @Override
     protected void onDetachedFromWindow() {
+        /**
+         * 经过实践，在Recycle布局界面中 当Banner滑出界面 出现
+         * java.lang.NullPointerException:
+         * Attempt to invoke virtual method
+         * 'void android.os.Handler.removeMessages(int)' on a null object reference
+         * SimpleBannerViewPage.onDetachedFromWindow() 出现空指针
+         * 所以解决之前先判断 mHandler是否为空
+         */
         super.onDetachedFromWindow();
-        mHandler.removeMessages(AUTO_MESSAGE);
-        mHandler = null;
+        if(mHandler != null){
+            mHandler.removeMessages(AUTO_MESSAGE);
+            mHandler = null;
+        }
+
     }
 
     /* 内部(SimpleBannerViewPage)适配器 */
