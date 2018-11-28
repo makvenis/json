@@ -14,6 +14,7 @@ import java.util.TimerTask;
 
 /* 自定义轮播图 */
 
+@Deprecated
 public class SimpleImageBanner extends ViewGroup {
 
     /*TAG*/

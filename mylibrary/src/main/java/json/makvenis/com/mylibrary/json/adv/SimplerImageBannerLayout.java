@@ -49,7 +49,7 @@ R.drawable.banner3
 
  */
 
-
+@Deprecated
 public class SimplerImageBannerLayout extends FrameLayout implements
         SimpleImageBanner.OnSelectChangeIndex, SimpleImageBanner.OnClinkImageBanner{
 

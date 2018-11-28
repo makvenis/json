@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <sevice.sirius.com.simplesevice.banner.SimpleBannerViewPage
+        android:id="@+id/mSimpleBannerViewPage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </sevice.sirius.com.simplesevice.banner.SimpleBannerViewPage>
+
+    <RelativeLayout
+        android:layout_alignParentBottom="true"
+        android:background="#b5b5b5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- 广告位置 -->
+        <TextView
+            android:layout_marginLeft="8dp"
+            android:layout_centerVertical="true"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            android:id="@+id/mSimpleBannerAdvText"
+            android:text="广告位置"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- 小圆点 -->
+        <LinearLayout
+            android:gravity="center"
+            android:layout_margin="8dp"
+            android:id="@+id/mSimpleBannerDot"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

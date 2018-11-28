@@ -1,0 +1,71 @@
+
+        <!-- 布局文件 -->
+        <BannerLayout
+                android:id="@+id/mMyBanner"
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+        </BannerLayout>
+
+        final List<String> mPath=new ArrayList<>();
+        mPath.add("http://img3.imgtn.bdimg.com/it/u=670629421,608203952&fm=200&gp=0.jpg");
+        mPath.add("https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=346054189,780441543&fm=26&gp=0.jpg");
+        mPath.add("https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1536655533,2863126981&fm=26&gp=0.jpg");
+        mPath.add("https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2074012031,925977958&fm=26&gp=0.jpg");
+        mPath.add("https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1440849480,3944946162&fm=26&gp=0.jpg");
+        mPath.add("https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3709037923,3522139586&fm=26&gp=0.jpg");
+
+        final List<String> mText=new ArrayList<>();
+        mText.add("1111");
+        mText.add("2222");
+        mText.add("3333");
+        mText.add("4444");
+        mText.add("5555");
+        mText.add("6666");
+
+        mMyBanner = ((BannerLayout) findViewById(R.id.mMyBanner));
+
+        //1 创建布局
+        mMyBanner.setAdapterLayout(new BannerManager() {
+            /* 动态添加View视图 */
+            @Override
+            public View getView(int position) {
+                /* 创建自己的视图 */
+                ImageView imageView=new ImageView(mContext);
+                imageView.setScaleType(ImageView.ScaleType.FIT_XY);
+                Picasso.with(mContext).load(mPath.get(position)).into(imageView);
+
+                return imageView;
+            }
+
+            @Override
+            public int getCount() {
+                return mPath.size();
+            }
+
+            @Override
+            public String getItemText(int position) {
+
+                return mText.get(position);
+            }
+        });
+
+        //6 点击事件
+        mMyBanner.setOnSelectedItemClink(new BannerLayout.OnSelectedItemClink() {
+            @Override
+            public void clink(int position) {
+                Toast.makeText(mContext,position+"---被电击",Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
+        //2 开始滑动
+        mMyBanner.startRoll();
+
+        //3 滑动间隔时间
+        mMyBanner.setScrollItemTime(3000);
+
+        //4 设置滑动方向
+        mMyBanner.setOrientation(SimpleBannerViewPage.SCROLL_LEFT);
+
+        //5 设置滑动持续时间（动画持续时间）
+        mMyBanner.setDurationScrollerTime(1000);
