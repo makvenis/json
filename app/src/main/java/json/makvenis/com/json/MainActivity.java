@@ -1,20 +1,27 @@
 package json.makvenis.com.json;
 
 import android.content.Context;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Toast;
+import android.widget.ImageView;
 
-import json.makvenis.com.mylibrary.json.view.SimpleDelPlusView;
-import json.makvenis.com.mylibrary.json.view.SimpleToast;
+import com.squareup.picasso.Picasso;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import json.makvenis.com.mylibrary.json.banner.BannerLayout;
+import json.makvenis.com.mylibrary.json.banner.BannerManager;
+
 
 
 public class MainActivity extends AppCompatActivity {
     //private SimpleViewPage mSimpleViewPage;
 
     public final Context mContext = MainActivity.this;
+
+    private BannerLayout mMyBanner;
 
     //private TextView mText;
 
@@ -23,14 +30,57 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        SimpleDelPlusView view = (SimpleDelPlusView) findViewById(R.id.mTest);
+
+        mMyBanner = ((BannerLayout) findViewById(R.id.mMyBanner));
+
+        final List<String> mPath=new ArrayList<>();
+        mPath.add("http://img3.imgtn.bdimg.com/it/u=670629421,608203952&fm=200&gp=0.jpg");
+        mPath.add("https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=346054189,780441543&fm=26&gp=0.jpg");
+        mPath.add("https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1536655533,2863126981&fm=26&gp=0.jpg");
+        mPath.add("https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2074012031,925977958&fm=26&gp=0.jpg");
+        mPath.add("https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1440849480,3944946162&fm=26&gp=0.jpg");
+        mPath.add("https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3709037923,3522139586&fm=26&gp=0.jpg");
+
+        final List<String> mText=new ArrayList<>();
+        mText.add("1111");
+        mText.add("2222");
+        mText.add("3333");
+        mText.add("4444");
+        mText.add("5555");
+        mText.add("6666");
+
+        mMyBanner.setAdapterLayout(new BannerManager() {
+            @Override
+            public View getView(int position) {
+                ImageView imageView=new ImageView(mContext);
+                imageView.setScaleType(ImageView.ScaleType.FIT_XY);
+                Picasso.with(mContext).load(mPath.get(position)).into(imageView);
+                return imageView;
+            }
+
+            @Override
+            public int getCount() {
+                return mPath.size();
+            }
+
+            @Override
+            public String getItemText(int position) {
+                return mText.get(position);
+            }
+        });
+
+        mMyBanner.startRoll();
+
+
+
+        /*SimpleDelPlusView view = (SimpleDelPlusView) findViewById(R.id.mTest);
         view.setTextColor(Color.BLACK);
         view.onClinkCheckNumber(new SimpleDelPlusView.setOnClinkCheckNumber() {
             @Override
             public void showNowNumbler(int num) {
                 SimpleToast.makeText(mContext,num+"", Toast.LENGTH_SHORT).show();
             }
-        });
+        });*/
 
 
         //mText = ((TextView) findViewById(R.id.mText));
@@ -118,7 +168,7 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra("oldmgpath","http://p0.so.qhmsg.com/bdr/_240_/t01f758438475e8e20f.jpg");
         intent.putExtra("filename","makvenis");
         startActivity(intent);
-*/
+        */
     }
 
 

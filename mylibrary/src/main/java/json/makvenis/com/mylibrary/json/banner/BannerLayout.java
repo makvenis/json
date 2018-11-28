@@ -9,6 +9,8 @@ import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.view.Gravity;
+import android.view.LayoutInflater;
+import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -60,6 +62,9 @@ public class BannerLayout extends RelativeLayout {
 
     /* 7.1回调点击事件 */
     private OnSelectedItemClink clink;
+
+
+
     /* 7.2创建接口 */
     public interface OnSelectedItemClink{
         void clink(int position);
@@ -81,21 +86,24 @@ public class BannerLayout extends RelativeLayout {
     }
 
     public BannerLayout(Context context, AttributeSet attrs, int defStyleAttr) {
-        super(context, attrs, defStyleAttr);
+        this(context, attrs, defStyleAttr,0);
+    }
+
+    public BannerLayout(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+        super(context, attrs, defStyleAttr, defStyleRes);
         this.mContext = context;
         /* 1.初始化布局 */
         initView();
         /* 4.初始化指示器的颜色 */
         mSelectFocusDrawable = new ColorDrawable(Color.RED);
         mSelectNormalDrawable = new ColorDrawable(Color.WHITE);
-
     }
 
 
     /* 1.初始化布局 */
     private void initView() {
         //加载到当前布局中
-        inflate(mContext, R.layout.banner_simple_view_page_layout,this);
+        inflate(mContext,R.layout.banner_simple_view_page_layout,this);
         //控件查找
         mSimpleBannerViewPage = ((SimpleBannerViewPage) findViewById(R.id.mSimpleBannerViewPage));
         mSimpleBannerAdvText = ((TextView) findViewById(R.id.mSimpleBannerAdvText));

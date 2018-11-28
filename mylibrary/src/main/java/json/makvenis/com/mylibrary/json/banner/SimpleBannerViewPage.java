@@ -145,6 +145,14 @@ public class SimpleBannerViewPage extends ViewPager{
         this.clink = clink;
     }
 
+    /* 消除Handler得内存溢出 */
+    @Override
+    protected void onDetachedFromWindow() {
+        super.onDetachedFromWindow();
+        mHandler.removeMessages(AUTO_MESSAGE);
+        mHandler = null;
+    }
+
     /* 内部(SimpleBannerViewPage)适配器 */
     public class  SimpleBannerViewPageAdapter extends PagerAdapter{
 

@@ -5,11 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <sevice.sirius.com.simplesevice.banner.SimpleBannerViewPage
+    <json.makvenis.com.mylibrary.json.banner.SimpleBannerViewPage
         android:id="@+id/mSimpleBannerViewPage"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-    </sevice.sirius.com.simplesevice.banner.SimpleBannerViewPage>
+    </json.makvenis.com.mylibrary.json.banner.SimpleBannerViewPage>
 
     <RelativeLayout
         android:layout_alignParentBottom="true"

@@ -8,14 +8,24 @@
     tools:context="json.makvenis.com.json.MainActivity"
     android:weightSum="1">
 
-    <json.makvenis.com.mylibrary.json.view.SimpleDelPlusView
+    <!--<json.makvenis.com.mylibrary.json.view.SimpleDelPlusView
         android:id="@+id/mTest"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
-    </json.makvenis.com.mylibrary.json.view.SimpleDelPlusView>
+    </json.makvenis.com.mylibrary.json.view.SimpleDelPlusView>-->
 
-<!--    <json.makvenis.com.mylibrary.json.view.SimpleInputCode
+
+    <json.makvenis.com.mylibrary.json.banner.BannerLayout
+        android:id="@+id/mMyBanner"
+        android:layout_width="match_parent"
+        android:layout_height="160dp">
+    </json.makvenis.com.mylibrary.json.banner.BannerLayout>
+
+
+
+
+    <!-- <json.makvenis.com.mylibrary.json.view.SimpleInputCode
         android:digits="1234567890."
         android:id="@+id/verificationCodeInput"
         android:layout_width="match_parent"

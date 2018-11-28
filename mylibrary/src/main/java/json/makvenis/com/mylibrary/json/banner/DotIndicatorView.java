@@ -23,7 +23,11 @@ public class DotIndicatorView extends View {
     }
 
     public DotIndicatorView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
-        super(context, attrs, defStyleAttr);
+        this(context, attrs, defStyleAttr,0);
+    }
+
+    public DotIndicatorView(Context context, @Nullable AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+        super(context, attrs, defStyleAttr, defStyleRes);
         this.mContext=context;
     }
 
@@ -31,7 +35,6 @@ public class DotIndicatorView extends View {
     public void setDrawable(Drawable drawable) {
         this.drawable = drawable;
     }
-
 
     @Override
     protected void onDraw(Canvas canvas) {
