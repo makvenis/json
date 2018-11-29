@@ -113,10 +113,17 @@ public class SimpleBannerViewPage extends ViewPager{
 
     /* 3.2开始去播放方法 */
     public void startRoll(){
-        /* 清除消息 */
-        mHandler.removeMessages(AUTO_MESSAGE);
-        /* 启动之后，每间隔 mTime 时间发送一次消息到Handler */
-        mHandler.sendEmptyMessageDelayed(AUTO_MESSAGE,mTime);
+        /**
+         * BUG 2018-11-29 修复因为下拉刷新时候 mHandler报错
+         */
+        if(mHandler != null){
+            /* 清除消息 */
+            mHandler.removeMessages(AUTO_MESSAGE);
+            /* 启动之后，每间隔 mTime 时间发送一次消息到Handler */
+            mHandler.sendEmptyMessageDelayed(AUTO_MESSAGE,mTime);
+        }else {
+            startRoll();
+        }
     }
 
     /* 3.3扩展方法，用户设置间隔时间 */
